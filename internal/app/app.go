@@ -1,6 +1,7 @@
 package app
 
 import (
+	"fmt"
 	"github.com/idmaksim/notification-service/internal/config"
 	"github.com/idmaksim/notification-service/internal/usecases/email"
 )
@@ -23,5 +24,6 @@ func (a *App) Run() error {
 		"Hello",
 		"Hello maksim",
 	)
+	fmt.Println("Email was sent")
 	return err
 }
