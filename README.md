@@ -82,6 +82,16 @@ To send a notification, publish a message to RabbitMQ with the following JSON fo
 }
 ```
 
+## 📤 Sending a Test Message
+
+You can send a test message to the broker using the provided script:
+
+```bash
+go run scripts/produce_message.go
+```
+
+This script will publish a test message to RabbitMQ using the settings from your `.env` file.
+
 ## 🔍 Monitoring
 
 You can monitor RabbitMQ using the management console:
