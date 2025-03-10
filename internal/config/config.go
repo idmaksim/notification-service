@@ -6,9 +6,13 @@ import (
 )
 
 type Config struct {
-	MailApiKey    string `env:"MAIL_API_KEY"`
-	EmailFromName string `env:"EMAIL_FROM_NAME"`
-	EmailFrom     string `env:"EMAIL_FROM"`
+	MailApiKey       string `env:"MAIL_API_KEY"`
+	EmailFromName    string `env:"EMAIL_FROM_NAME"`
+	EmailFrom        string `env:"EMAIL_FROM"`
+	RabbitUrl        string `env:"RABBIT_URL"`
+	RabbitQueue      string `env:"RABBIT_QUEUE"`
+	RabbitExchange   string `env:"RABBIT_EXCHANGE"`
+	RabbitRoutingKey string `env:"RABBIT_ROUTING_KEY"`
 }
 
 var cfg *Config

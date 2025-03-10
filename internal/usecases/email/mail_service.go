@@ -2,9 +2,9 @@ package email
 
 import (
 	"context"
-	"fmt"
 	"github.com/idmaksim/notification-service/internal/config"
 	"github.com/mailersend/mailersend-go"
+	"log"
 	"time"
 )
 
@@ -39,9 +39,10 @@ func (s *MailService) Send(target, subject, text string) error {
 	message.SetText(text)
 
 	if res, err := ms.Email.Send(ctx, message); err != nil {
+		log.Printf("Error sending email: %v\n", err)
 		return err
 	} else {
-		fmt.Println(res.Status)
+		log.Printf("Status is %v\n", res.StatusCode)
 	}
 
 	return nil
