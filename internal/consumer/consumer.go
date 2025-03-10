@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/idmaksim/notification-service/internal/config"
-	"github.com/idmaksim/notification-service/internal/notificationService"
+	"github.com/idmaksim/notification-service/internal/notification_service"
 	"github.com/idmaksim/notification-service/internal/usecases/email"
 	"log"
 	"time"
