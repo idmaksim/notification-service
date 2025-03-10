@@ -2,7 +2,12 @@ services:
   app:
     build: .
     env_file: .env
+    environment:
+      - RABBIT_URL=amqp://guest:guest@rabbitmq:5672/
     restart: unless-stopped
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -14,6 +19,11 @@ services:
       - RABBITMQ_DEFAULT_PASS=guest
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "status"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
 volumes:
   rabbitmq-data:
