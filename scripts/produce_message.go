@@ -11,11 +11,10 @@ import (
 )
 
 const (
-	//target = "irina_8823@mail.ru"
 	target       = "dementevmaksim1657@gmail.com"
 	subject      = "Subject"
 	messageCount = 10
-	text         = "Hello worl"
+	text         = "Hello world"
 
 	rabbitMQURL = "amqp://guest:guest@localhost:5672/"
 )
