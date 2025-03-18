@@ -13,7 +13,7 @@ import (
 const (
 	target       = "dementevmaksim1657@gmail.com"
 	subject      = "Subject"
-	messageCount = 10
+	messageCount = 1
 	text         = "Hello world"
 
 	rabbitMQURL = "amqp://guest:guest@localhost:5672/"
